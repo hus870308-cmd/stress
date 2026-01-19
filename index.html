@@ -57,7 +57,7 @@ tw-link:active {
 
 </tw-passagedata><tw-passagedata pid="2" name="選項 A：大家都在笑我，我好可憐" tags="" position="475,250" size="100,100">(set: $stress to $stress + 40)
 你的心裡充滿了陰影，感覺周遭的笑聲被放大了。
-
+(set: $choice1 to &quot;在意外發生時陷入『受害者思維』，放大他人的眼光，導致防禦心理激增。&quot;)
 目前的壓力值：(text-style: &quot;bold&quot;)[(text-colour: &quot;red&quot;)[$stress %]]
 ### 系統狀態評估中...
 (t8n: &quot;pulse&quot;)[監測到情緒波動。]
@@ -74,6 +74,7 @@ tw-link:active {
 
 
 </tw-passagedata><tw-passagedata pid="3" name="選項 B：雖然有人關心，但他一定是裝的" tags="" position="475,375" size="100,100">(set: $stress to $stress + 20)
+(set: $choice1 to &quot;在接收關懷時選擇『懷疑動機』，關閉了外部支援系統，讓心靈進入孤立狀態。&quot;)
 你覺得世界很虛偽。
 目前的壓力值：(text-style: &quot;bold&quot;)[(text-colour: &quot;red&quot;)[$stress %]]
 ### 系統狀態評估中...
@@ -89,6 +90,7 @@ tw-link:active {
 目前的壓力指數：(if: $stress &lt; 9)[ [ (text-colour: &quot;cyan&quot;)[□□]□□□□□□□□ ] ](else-if: $stress &lt;= 10)[ [ (text-colour: &quot;cyan&quot;)[■]□□□□□□□□□ ] ](else-if: $stress &lt;= 20)[ [ (text-colour: &quot;cyan&quot;)[■■]□□□□□□□□ ] ](else-if: $stress &lt;= 30)[ [ (text-colour: &quot;yellow&quot;)[■■■]□□□□□□□ ] ](else-if: $stress &lt;= 40)[ [ (text-colour: &quot;yellow&quot;)[■■■■]□□□□□□ ] ](else-if: $stress &lt;= 50)[ [ (text-colour: &quot;yellow&quot;)[■■■■■]□□□□□ ] ](else-if: $stress &lt;= 60)[ [ (text-colour: &quot;orange&quot;)[■■■■■■]□□□□ ] ](else-if: $stress &lt;= 70)[ [ (text-colour: &quot;red&quot;)[■■■■■■■]□□□ ] ](else-if: $stress &lt;= 80)[ [ (text-colour: &quot;red&quot;)[■■■■■■■■]□□ ] ](else-if: $stress &lt;= 90)[ [ (text-colour: &quot;red&quot;)[■■■■■■■■■]□ ] ](else:)[ (text-style: &quot;rumble&quot;)[(text-colour: &quot;red&quot;)[ [■■■■■■■■■■] !!!警告!!! ]] ]
 
 </tw-passagedata><tw-passagedata pid="4" name="選項 C：這也是人生的一種樂趣" tags="" position="475,500" size="100,100">(set: $stress to $stress + 10)
+(set: $choice1 to &quot;消耗了自我的精神，讓自己快樂一些。&quot;)
 你消耗了一些精神，試圖讓自己快樂起來！
 目前的壓力值：(text-style: &quot;bold&quot;)[(text-colour: &quot;red&quot;)[$stress %]]
 ### 系統狀態評估中...
@@ -120,19 +122,16 @@ tw-link:active {
 目前的壓力指數：(if: $stress &lt; 9)[ [ (text-colour: &quot;cyan&quot;)[□□]□□□□□□□□ ] ](else-if: $stress &lt;= 10)[ [ (text-colour: &quot;cyan&quot;)[■]□□□□□□□□□ ] ](else-if: $stress &lt;= 20)[ [ (text-colour: &quot;cyan&quot;)[■■]□□□□□□□□ ] ](else-if: $stress &lt;= 30)[ [ (text-colour: &quot;yellow&quot;)[■■■]□□□□□□□ ] ](else-if: $stress &lt;= 40)[ [ (text-colour: &quot;yellow&quot;)[■■■■]□□□□□□ ] ](else-if: $stress &lt;= 50)[ [ (text-colour: &quot;yellow&quot;)[■■■■■]□□□□□ ] ](else-if: $stress &lt;= 60)[ [ (text-colour: &quot;orange&quot;)[■■■■■■]□□□□ ] ](else-if: $stress &lt;= 70)[ [ (text-colour: &quot;red&quot;)[■■■■■■■]□□□ ] ](else-if: $stress &lt;= 80)[ [ (text-colour: &quot;red&quot;)[■■■■■■■■]□□ ] ](else-if: $stress &lt;= 90)[ [ (text-colour: &quot;red&quot;)[■■■■■■■■■]□ ] ](else:)[ (text-style: &quot;rumble&quot;)[(text-colour: &quot;red&quot;)[ [■■■■■■■■■■] !!!警告!!! ]] ]
 
 </tw-passagedata><tw-passagedata pid="6" name="選項 B：低頭不語，整場討論都無法投入" tags="" position="825,375" size="100,100">(set: $stress to $stress + 30)
-
+(set: $choice2 to &quot;在壓力下選擇『冷處理與退縮』，情緒因無法流動而內化，造成長期心智負擔。&quot;)
 你覺得自己是一個失敗者
 就連時間管理都搞不定
 (if: $stress &gt;= 70)[ (text-style: &quot;sway&quot;)[你感覺到組員們的視線像針一樣刺在你背後。] ]
-
 這場討論在尷尬的氣氛中結束了。
 目前的壓力值：(text-style: &quot;bold&quot;)[(text-colour: &quot;red&quot;)[$stress %]]
-(if: $stress &gt;= 50)[ (text-style: &quot;shudder&quot;)[你的大腦嗡嗡作響...] ]
-(if: $stress &gt;= 70)[ (text-style: &quot;sway&quot;)[視線開始模糊，你只聽得見自己的心跳聲。] ]
+(if: $stress &gt;= 50)[ (text-style: &quot;shudder&quot;)[你的大腦嗡嗡作響...] ](if: $stress &gt;= 70)[ (text-style: &quot;sway&quot;)[視線開始模糊，你只聽得見自己的心跳聲。] ]
 目前的壓力指數：(if: $stress &lt; 9)[ [ (text-colour: &quot;cyan&quot;)[□□]□□□□□□□□ ] ](else-if: $stress &lt;= 10)[ [ (text-colour: &quot;cyan&quot;)[■]□□□□□□□□□ ] ](else-if: $stress &lt;= 20)[ [ (text-colour: &quot;cyan&quot;)[■■]□□□□□□□□ ] ](else-if: $stress &lt;= 30)[ [ (text-colour: &quot;yellow&quot;)[■■■]□□□□□□□ ] ](else-if: $stress &lt;= 40)[ [ (text-colour: &quot;yellow&quot;)[■■■■]□□□□□□ ] ](else-if: $stress &lt;= 50)[ [ (text-colour: &quot;yellow&quot;)[■■■■■]□□□□□ ] ](else-if: $stress &lt;= 60)[ [ (text-colour: &quot;orange&quot;)[■■■■■■]□□□□ ] ](else-if: $stress &lt;= 70)[ [ (text-colour: &quot;red&quot;)[■■■■■■■]□□□ ] ](else-if: $stress &lt;= 80)[ [ (text-colour: &quot;red&quot;)[■■■■■■■■]□□ ] ](else-if: $stress &lt;= 90)[ [ (text-colour: &quot;red&quot;)[■■■■■■■■■]□ ] ](else:)[ (text-style: &quot;rumble&quot;)[(text-colour: &quot;red&quot;)[ [■■■■■■■■■■] !!!警告!!! ]] ]
 (if: $stress &gt;= 70)[ (text-colour: &quot;red&quot;)[你的理智線快斷了！] ]
 (if: $stress &gt;= 80)[ (enchant: ?page, (text-style: &quot;sway&quot;)) ]
-
 
 (if: $stress &gt;= 100)[
   [[核心過熱：精神崩潰結局]]
@@ -140,6 +139,7 @@ tw-link:active {
 (else:)[
   [[核心穩定：繼續下一個事件]]
 ]</tw-passagedata><tw-passagedata pid="7" name="選項 C：立刻拿出資料開始小組工作" tags="" position="825,500" size="100,100">(set: $stress to $stress + 40)
+(set: $choice2 to &quot;在面對責備時，選擇忽視自己的感受。造成壓力持續增加，並且後續仍沒有處理情緒。&quot;)
 你覺得硬撐下去有點心累。
 
 (if: $stress &gt;= 60)[ (text-style: &quot;sway&quot;)[你感覺到組員們的視線像針一樣刺在你背後。] ]
@@ -178,8 +178,10 @@ tw-link:active {
 (else:)[
   [[核心穩定：繼續下一個事件]]
 ]</tw-passagedata><tw-passagedata pid="9" name="選項 A：直接回嗆「啊不就五分鐘嗎？有必要這麼兇？你是怎樣！」" tags="" position="825,250" size="100,100">(set: $stress to $stress - 20)
+(set: $choice2 to &quot;在社交衝突中選擇『攻擊性防衛』，雖獲得短暫宣洩，卻破壞了人際環境，引發後續不安。&quot;)
 你發洩了自己的情緒！
 (if: $stress &lt; 30)[ (text-colour: &quot;green&quot;)[雖然行為有點魯莽，但你心裡確實好受多了。] ]
+(set: $choice2 to &quot;在衝突中選擇『直接反擊』，雖短暫宣洩但造成環境敵意。&quot;)
 目前的壓力值：(text-style: &quot;bold&quot;)[(text-colour: &quot;red&quot;)[$stress %]]
 [[你跟組長大吵一架，全班都在看你們。]]
 目前的壓力指數：(if: $stress &lt; 9)[ [ (text-colour: &quot;cyan&quot;)[□□]□□□□□□□□ ] ](else-if: $stress &lt;= 10)[ [ (text-colour: &quot;cyan&quot;)[■]□□□□□□□□□ ] ](else-if: $stress &lt;= 20)[ [ (text-colour: &quot;cyan&quot;)[■■]□□□□□□□□ ] ](else-if: $stress &lt;= 30)[ [ (text-colour: &quot;yellow&quot;)[■■■]□□□□□□□ ] ](else-if: $stress &lt;= 40)[ [ (text-colour: &quot;yellow&quot;)[■■■■]□□□□□□ ] ](else-if: $stress &lt;= 50)[ [ (text-colour: &quot;yellow&quot;)[■■■■■]□□□□□ ] ](else-if: $stress &lt;= 60)[ [ (text-colour: &quot;orange&quot;)[■■■■■■]□□□□ ] ](else-if: $stress &lt;= 70)[ [ (text-colour: &quot;red&quot;)[■■■■■■■]□□□ ] ](else-if: $stress &lt;= 80)[ [ (text-colour: &quot;red&quot;)[■■■■■■■■]□□ ] ](else-if: $stress &lt;= 90)[ [ (text-colour: &quot;red&quot;)[■■■■■■■■■]□ ] ](else:)[ (text-style: &quot;rumble&quot;)[(text-colour: &quot;red&quot;)[ [■■■■■■■■■■] !!!警告!!! ]] ]
@@ -202,7 +204,7 @@ tw-link:active {
 啟動模擬
 {&lt;div style=&quot;text-align: margin-top: 50px;&quot;&gt;
 [[事件：體育課的大隊接力]]&lt;/div&gt;
-}</tw-passagedata><tw-passagedata pid="11" name="核心過熱：精神崩潰結局" tags="" position="925,625" size="100,100"></tw-passagedata><tw-passagedata pid="12" name="核心穩定：繼續下一個事件" tags="" position="1025,375" size="100,100">你拖著疲憊的身體回到家，關上房門，世界安靜了下來。
+}</tw-passagedata><tw-passagedata pid="11" name="核心過熱：精神崩潰結局" tags="" position="875,675" size="100,100"></tw-passagedata><tw-passagedata pid="12" name="核心穩定：繼續下一個事件" tags="" position="975,375" size="100,100">你拖著疲憊的身體回到家，關上房門，世界安靜了下來。
 ---
 
 進入深夜... 
@@ -226,6 +228,7 @@ tw-link:active {
 (if: $stress &gt;= 60)[ (text-style: &quot;shudder&quot;)[你的大腦依然處於亢奮狀態，黑暗中手機的螢幕光顯得格外刺眼。] ]
 
 目前的壓力指數：(if: $stress &lt; 9)[ [ (text-colour: &quot;cyan&quot;)[□□]□□□□□□□□ ] ](else-if: $stress &lt;= 10)[ [ (text-colour: &quot;cyan&quot;)[■]□□□□□□□□□ ] ](else-if: $stress &lt;= 20)[ [ (text-colour: &quot;cyan&quot;)[■■]□□□□□□□□ ] ](else-if: $stress &lt;= 30)[ [ (text-colour: &quot;yellow&quot;)[■■■]□□□□□□□ ] ](else-if: $stress &lt;= 40)[ [ (text-colour: &quot;yellow&quot;)[■■■■]□□□□□□ ] ](else-if: $stress &lt;= 50)[ [ (text-colour: &quot;yellow&quot;)[■■■■■]□□□□□ ] ](else-if: $stress &lt;= 60)[ [ (text-colour: &quot;orange&quot;)[■■■■■■]□□□□ ] ](else-if: $stress &lt;= 70)[ [ (text-colour: &quot;red&quot;)[■■■■■■■]□□□ ] ](else-if: $stress &lt;= 80)[ [ (text-colour: &quot;red&quot;)[■■■■■■■■]□□ ] ](else-if: $stress &lt;= 90)[ [ (text-colour: &quot;red&quot;)[■■■■■■■■■]□ ] ](else:)[ (text-style: &quot;rumble&quot;)[(text-colour: &quot;red&quot;)[ [■■■■■■■■■■] !!!警告!!! ]] ]</tw-passagedata><tw-passagedata pid="14" name="選項 B：反省再反省" tags="" position="1150,500" size="100,100">(set: $stress to $stress + 30)
+(set: $choice3 to &quot;在休息時間過度『自我批判』，試圖用焦慮驅動進步，導致精神核心持續過熱。&quot;)
 (set: $stay_up to true)
 你拿起筆記本，強迫自己分析今天失敗的原因。
 (text-style: &quot;shudder&quot;)[「如果我那時這樣說...如果我那樣做...」]
@@ -235,6 +238,7 @@ tw-link:active {
 
 [[等待天亮... -&gt; 最終判斷]]
 目前的壓力指數：(if: $stress &lt; 9)[ [ (text-colour: &quot;cyan&quot;)[□□]□□□□□□□□ ] ](else-if: $stress &lt;= 10)[ [ (text-colour: &quot;cyan&quot;)[■]□□□□□□□□□ ] ](else-if: $stress &lt;= 20)[ [ (text-colour: &quot;cyan&quot;)[■■]□□□□□□□□ ] ](else-if: $stress &lt;= 30)[ [ (text-colour: &quot;yellow&quot;)[■■■]□□□□□□□ ] ](else-if: $stress &lt;= 40)[ [ (text-colour: &quot;yellow&quot;)[■■■■]□□□□□□ ] ](else-if: $stress &lt;= 50)[ [ (text-colour: &quot;yellow&quot;)[■■■■■]□□□□□ ] ](else-if: $stress &lt;= 60)[ [ (text-colour: &quot;orange&quot;)[■■■■■■]□□□□ ] ](else-if: $stress &lt;= 70)[ [ (text-colour: &quot;red&quot;)[■■■■■■■]□□□ ] ](else-if: $stress &lt;= 80)[ [ (text-colour: &quot;red&quot;)[■■■■■■■■]□□ ] ](else-if: $stress &lt;= 90)[ [ (text-colour: &quot;red&quot;)[■■■■■■■■■]□ ] ](else:)[ (text-style: &quot;rumble&quot;)[(text-colour: &quot;red&quot;)[ [■■■■■■■■■■] !!!警告!!! ]] ]</tw-passagedata><tw-passagedata pid="15" name="選項 C：躺在床上反覆思考人生。" tags="" position="1275,500" size="100,100">(set: $stress to $stress + 20)
+(set: $choice3 to &quot;在壓力累積後進入『失能狀態』，雖然停止了運作，但未消化的情緒仍殘留在系統中。&quot;)
 (set: $stay_up to false)
 你像一具空殼一樣躺在床上。
 沒有音樂，沒有影片，只有窗外偶爾經過的車聲。
@@ -245,18 +249,18 @@ tw-link:active {
 [[等待天亮... -&gt; 最終判斷]]
 
 目前的壓力指數：(if: $stress &lt; 9)[ [ (text-colour: &quot;cyan&quot;)[□□]□□□□□□□□ ] ](else-if: $stress &lt;= 10)[ [ (text-colour: &quot;cyan&quot;)[■]□□□□□□□□□ ] ](else-if: $stress &lt;= 20)[ [ (text-colour: &quot;cyan&quot;)[■■]□□□□□□□□ ] ](else-if: $stress &lt;= 30)[ [ (text-colour: &quot;yellow&quot;)[■■■]□□□□□□□ ] ](else-if: $stress &lt;= 40)[ [ (text-colour: &quot;yellow&quot;)[■■■■]□□□□□□ ] ](else-if: $stress &lt;= 50)[ [ (text-colour: &quot;yellow&quot;)[■■■■■]□□□□□ ] ](else-if: $stress &lt;= 60)[ [ (text-colour: &quot;orange&quot;)[■■■■■■]□□□□ ] ](else-if: $stress &lt;= 70)[ [ (text-colour: &quot;red&quot;)[■■■■■■■]□□□ ] ](else-if: $stress &lt;= 80)[ [ (text-colour: &quot;red&quot;)[■■■■■■■■]□□ ] ](else-if: $stress &lt;= 90)[ [ (text-colour: &quot;red&quot;)[■■■■■■■■■]□ ] ](else:)[ (text-style: &quot;rumble&quot;)[(text-colour: &quot;red&quot;)[ [■■■■■■■■■■] !!!警告!!! ]] ]</tw-passagedata><tw-passagedata pid="16" name="選項 A：報復性熬夜；滑手機、刷社群、玩遊戲。" tags="" position="1025,500" size="100,100">(set: $stress to $stress - 10)
+(set: $choice3 to &quot;在疲累時選擇『代償性快樂』，犧牲生理修復時間來換取短暫快樂，透支了隔天的精神。&quot;)
 (set: $stay_up to true)
 深夜的網路世界暫時麻痺了你的痛。
 你獲得了短暫的快樂，代價是明天會精神透支的自己。
+(set: $choice3 to &quot;在深夜選擇『報復性補償』，導致心智無法修復。&quot;)
 
 目前的壓力值：(text-style: &quot;bold&quot;)[(text-colour: &quot;red&quot;)[$stress %]]
 
 [[早上醒來疲憊的自己]]
 
 目前的壓力指數：(if: $stress &lt; 9)[ [ (text-colour: &quot;cyan&quot;)[□□]□□□□□□□□ ] ](else-if: $stress &lt;= 10)[ [ (text-colour: &quot;cyan&quot;)[■]□□□□□□□□□ ] ](else-if: $stress &lt;= 20)[ [ (text-colour: &quot;cyan&quot;)[■■]□□□□□□□□ ] ](else-if: $stress &lt;= 30)[ [ (text-colour: &quot;yellow&quot;)[■■■]□□□□□□□ ] ](else-if: $stress &lt;= 40)[ [ (text-colour: &quot;yellow&quot;)[■■■■]□□□□□□ ] ](else-if: $stress &lt;= 50)[ [ (text-colour: &quot;yellow&quot;)[■■■■■]□□□□□ ] ](else-if: $stress &lt;= 60)[ [ (text-colour: &quot;orange&quot;)[■■■■■■]□□□□ ] ](else-if: $stress &lt;= 70)[ [ (text-colour: &quot;red&quot;)[■■■■■■■]□□□ ] ](else-if: $stress &lt;= 80)[ [ (text-colour: &quot;red&quot;)[■■■■■■■■]□□ ] ](else-if: $stress &lt;= 90)[ [ (text-colour: &quot;red&quot;)[■■■■■■■■■]□ ] ](else:)[ (text-style: &quot;rumble&quot;)[(text-colour: &quot;red&quot;)[ [■■■■■■■■■■] !!!警告!!! ]] ]</tw-passagedata><tw-passagedata pid="17" name=" 最終判斷" tags="" position="1275,775" size="100,100">### 模擬結束：心理狀態評估報告
-
 (if: $stay_up is true)[ (text-colour: &quot;orange&quot;)[偵測到睡眠剝奪：明早理智閾值降低。]\n ]
-
 (if: $stress &gt;= 100)[
   ## 結局：核心熔毀 (Core Meltdown)
   (text-style: &quot;rumble&quot;)[(text-colour: &quot;red&quot;)[你的情緒終於爆發了。]]
@@ -269,15 +273,27 @@ tw-link:active {
   你依然能正常運作，但你感覺自己像是一條拉到極限的橡皮筋。
   系統建議：請試著找人聊聊。
 ]
-(else:)[
-  ## 結局：心靈韌性 (Mental Resilience)
+(else:)[  ## 結局：心靈韌性 (Mental Resilience)
   (text-colour: &quot;cyan&quot;)[偵測到穩定的核心頻率。]
   你成功轉化了今日的惡意。
-  雖然世界不完美，但你依然是自己的主人。
-]
-
+  雖然世界不完美，但你依然是自己的主人。]
 ---
-[[模擬系統：內心管理大師]] </tw-passagedata><tw-passagedata pid="18" name="早上醒來疲憊的自己" tags="" position="1150,625" size="100,100">(set: $stress to $stress + 40)
+### [ 系統壓力成因分析 ]
+(text-colour: &quot;grey&quot;)[偵測到以下關鍵決策：]
+
+* 事件一：$choice1
+* 事件二：$choice2
+* 事件三：$choice3
+(if: $stress &gt;= 100)[
+  (text-colour: &quot;red&quot;)[【深度分析】：你的潰敗並非偶然。當你在每個節點都選擇了「對抗」或「消耗」而非「調節」時，大腦已經沒有能力去面對了。]
+]
+(else-if: $stress &gt;= 60)[
+  (text-colour: &quot;orange&quot;)[【深度分析】：你維持了表面的和平，這是很棒的！但自我內在系統過載。你的壓力來自於「承擔過度」，請試著給予自己喘息空間。]
+]
+(else:)[
+  (text-colour: &quot;cyan&quot;)[【深度分析】：優異的調節能力。你成功辨識了情緒陷阱，並在關鍵時刻選擇了對自己傷害最低的路徑。]
+]
+[[模擬系統：內心管理大師]] </tw-passagedata><tw-passagedata pid="18" name="早上醒來疲憊的自己" tags="" position="1075,625" size="100,100">(set: $stress to $stress + 40)
 (set: $stay_up to true)
 昨夜的熬夜使得自己精神相當的差
 你無法控制自己的手抖
